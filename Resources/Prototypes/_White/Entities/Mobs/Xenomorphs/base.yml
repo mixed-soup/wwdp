@@ -1,6 +1,8 @@
 - type: entity
   parent:
-  - BaseSimpleMob
+  - BaseMob
+  - MobDamageable
+  - MobPolymorphable
   - MobCombat
   - MobBloodstream
   - MobFlammable
@@ -14,6 +16,13 @@
         Toxin: -5
         Airloss: -10
         Brute: -5
+  - type: Pinpointer
+    component: XenomorphQueen
+    alert: QueenFinder
+    isActive: true
+    canToggle: false
+    canEmag: false
+    canExamine: false
   - type: ThermalVision
     toggleAction: ToggleThermalVisionXenomorph
     color: "#7d0cc9"
@@ -137,7 +146,6 @@
   - type: Prying
     pryPowered: true
   - type: Hands
-  - type: ComplexInteraction
   - type: Puller
     needsHands: false
   - type: IdExaminable
